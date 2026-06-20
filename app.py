@@ -207,14 +207,14 @@ def main():
             with meta_col1:
                 dur = st.number_input("Durasi (detik)", 0, 600, 30)
                 jam = st.slider("Jam Panggilan (0-23)", 0, 23, 2)
-                voip = st.selectbox("Jaringan VOIP?", [0, 1], index=1)
-                foreign = st.selectbox("Prefix Luar Negeri?", [0, 1], index=1)
+                voip = st.selectbox("Jaringan VOIP? (1 = Ya, 0 = Tidak)", [0, 1], index=1)
+                foreign = st.selectbox("Prefix Luar Negeri? (1 = Ya, 0 = Tidak)", [0, 1], index=1)
                 
             with meta_col2:
                 freq_24 = st.number_input("Frek. 24 Jam", 0, 50, 18)
                 freq_7 = st.number_input("Frek. 7 Hari", 0, 100, 70)
                 reports = st.number_input("Laporan Komunitas", 0, 500, 25)
-                weekend = st.selectbox("Akhir Pekan?", [0, 1], index=1)
+                weekend = st.selectbox("Akhir Pekan? (1 = Ya, 0 = Tidak)", [0, 1], index=1)
                 
         # Baris 2: Audio & Tombol Aksi
         col_audio, col_spacer, col_btn = st.columns([1, 1, 2])
